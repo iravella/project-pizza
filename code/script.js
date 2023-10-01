@@ -132,11 +132,8 @@ if (userAge.toLowerCase() === 'adult') {
     exit(1);
 }
 
-console.log(selectedFood);
-
 alert(`Hello ${userName}! You have selected ${selectedFood} for serving type ${userAge}. The total 
          cost is ${totalCost} kr`);
-
 
 
 // Step 5 - Order confirmation

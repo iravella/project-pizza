@@ -6,6 +6,8 @@ alert(
   `Welcome to our Javascript Pizzeria. Ready to Start - - Switch case? - Click 'OK' to begin.`
 )
 
+const alertMessage = "Invalid selection, please start again and select a valid option. Bye 👋";
+
 const userName = prompt(
   `Please enter your name`
 )
@@ -38,7 +40,7 @@ switch (foodChoice) {
     selectedFood = 'Salad';
     break;
   default:
-    alert("Invalid selection, start again and select an option.");
+    alert(alertMessage);
     exit(1);
 }
 
@@ -72,7 +74,7 @@ switch (foodChoice) {
         alert('Great choice! You selected quattro formaggi Pizza.');
         break;
       default:
-        alert("Invalid selection, please start again and select a valid option. Bye 👋");
+        alert(alertMessage);
         break;
     }
     break;
@@ -96,7 +98,7 @@ switch (foodChoice) {
         alert('Great choice! You selected Chicken Pasta');
         break;
       default:
-        alert("Invalid selection, please start again and select a valid option. Bye 👋");
+        alert(alertMessage);
         break;
     }
     break;
@@ -120,13 +122,13 @@ switch (foodChoice) {
         alert('Great choice! You selected Grilled chicken Salad');
         break;
       default:
-        alert("Invalid selection, please start again and select a valid option. Bye 👋");
+        alert(alertMessage);
         break;
     }
     break;
 
   default:
-    alert("Invalid selection, please start again and select an option. Bye 👋");
+    alert(alertMessage);
     break;
 }
 
@@ -134,34 +136,35 @@ switch (foodChoice) {
 // Your code goes here
 
 const userAge = prompt(
-  `Please specify if the food is intended for a child or an adult `
+    `Please specify if the food is intended for a child or an adult `
 )
 
+let totalCost;
+
 if (userAge.toLowerCase() === 'adult') {
-  alert(`Hello ${userName}! You have selected ${foodChoice} for serving type ${userAge}. The total 
-       cost is 200 kr`);
+    totalCost = 200;
+
 } else if (userAge.toLowerCase() === 'child') {
-  alert(`Hello ${userName}! You have selected ${foodChoice} for serving type ${userAge}. The total 
-       cost is 150 kr`);
+    totalCost = 150;
 } else {
-  alert("Invalid selection, please start again and select an option. Bye 👋");
-  exit(1);
+    alert(alertMessage);
+    exit(1);
 }
+
+alert(`Hello ${userName}! You have selected ${selectedFood} for serving type ${userAge}. The total 
+         cost is ${totalCost} kr`);
+
 
 // Step 5 - Order confirmation
 // Your code goes here
 
 let orderConfirmation = prompt(
-  `Please confirm the order (Yes or No)`
+    `Please confirm the order (Yes or No)`
 );
 
 
 if (orderConfirmation.toLowerCase() === 'yes') {
-  alert(`Your order has been confirmed! Enjoy your meal, ${userName}!`);
+    alert(`Your order has been confirmed! Enjoy your meal, ${userName}!`);
 } else {
-  alert(`Order canceled. Have a great day, ${userName}!`);
+    alert(`Order canceled. Have a great day, ${userName}!`);
 }
-
-
-
-
