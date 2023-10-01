@@ -17,7 +17,7 @@ alert(`Hello ${userName}!.`);
 // Your code goes here
 
 const foodChoice = prompt(
-  
+
   `Please select your food
   1 - Pizza
   2 - Pasta
@@ -27,7 +27,7 @@ const foodChoice = prompt(
 
 let selectedFood;
 
-switch(foodChoice) {
+switch (foodChoice) {
   case '1':
     selectedFood = 'Pizza'
     break;
@@ -38,8 +38,8 @@ switch(foodChoice) {
     selectedFood = 'Salad';
     break;
   default:
-  alert ("Invalid selection, start again and select an option.");
-  exit(1);
+    alert("Invalid selection, start again and select an option.");
+    exit(1);
 }
 
 alert(`Hello, ${selectedFood} is selected!`);
@@ -50,7 +50,7 @@ let pizzaType = "";
 let pastaType = "";
 let saladType = "";
 
-switch (foodChoice){
+switch (foodChoice) {
   case "1": //Pizza
     pizzaType = prompt(
       `Select your favourite Pizza type
@@ -60,7 +60,7 @@ switch (foodChoice){
       Please enter the number of your choice`
     );
 
-    
+
     switch (pizzaType) {
       case '1':
         alert('Great choice! You selected Mozarilla Pizza.');
@@ -77,7 +77,7 @@ switch (foodChoice){
     }
     break;
 
-    case '2': //Pasta
+  case '2': //Pasta
     pastaType = prompt(
       `Select your favourite Pasta type
       1 - Vegetable
@@ -101,7 +101,7 @@ switch (foodChoice){
     }
     break;
 
-    case '3': // Salad
+  case '3': // Salad
     saladType = prompt(
       `Select your favourite Salad type
       1 - Chicken
@@ -151,7 +151,16 @@ if (userAge.toLowerCase() === 'adult') {
 // Step 5 - Order confirmation
 // Your code goes here
 
+let orderConfirmation = prompt(
+  `Please confirm the order (Yes or No)`
+);
 
+
+if (orderConfirmation.toLowerCase() === 'yes') {
+  alert(`Your order has been confirmed! Enjoy your meal, ${userName}!`);
+} else {
+  alert(`Order canceled. Have a great day, ${userName}!`);
+}
 
 
 
