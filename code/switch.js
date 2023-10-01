@@ -44,7 +44,7 @@ switch (foodChoice) {
     exit(1);
 }
 
-alert(`Hello, ${selectedFood} is selected!`);
+alert(`Hello ${userName}, ${selectedFood} is selected!`);
 
 // Step 3 - Subtype choice
 // Your code goes here
