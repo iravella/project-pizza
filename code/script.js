@@ -145,7 +145,7 @@ let orderConfirmation = prompt(
 
 
 if (orderConfirmation.toLowerCase() === 'yes') {
-    alert(`Your order has been confirmed! Enjoy your meal, ${userName}!`);
+    alert(`Your order has been confirmed! Enjoy your ${selectedFood}, ${userName}!`);
 } else {
     alert(`Order canceled. Have a great day, ${userName}!`);
 }
