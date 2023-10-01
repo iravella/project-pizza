@@ -2,6 +2,8 @@
 
 // Step 1 - Welcome and introduction
 // Your code goes here
+
+const alertMessage = "Invalid selection, please start again and select a valid option. Bye 👋";
 alert(
     `Welcome to our Javascript Pizzeria. Ready to Start? - Click 'OK' to begin.`
 )
@@ -32,7 +34,7 @@ if (foodChoice === '1') {
 } else if (foodChoice === '3') {
     selectedFood = 'Salad';
 } else {
-    alert("Invalid selection, start again and select an option.");
+    alert(alertMessage);
     exit(1);
 }
 
@@ -40,9 +42,9 @@ alert(`Hello, ${selectedFood} is selected!`);
 
 // Step 3 - Subtype choice
 // Your code goes here
-let pizzaType = "";
-let pastaType = "";
-let saladType = "";
+let pizzaType;
+let pastaType;
+let saladType;
 
 if (foodChoice === "1") { // Pizza
     pizzaType = prompt(
@@ -55,18 +57,17 @@ if (foodChoice === "1") { // Pizza
 
     if (pizzaType === '1') {
         pizzaType = 'Mozarilla';
-        //alert('Great choice! You selected Mozarilla Pizza.');
     } else if (pizzaType === '2') {
         pizzaType = 'Kyckling'
-        //alert('Great choice! You selected Kyckling Pizza.');
     } else if (pizzaType === '3') {
         pizzaType = 'fromaggi'
-        //alert('Great choice! You selected quattro formaggi Pizza.');
     } else {
-        alert("Invalid selection, please start again and select a valid option. Bye 👋");
+        alert(alertMessage);
+        exit(1);
     }
-    alert('Great choice! You selected ${pizzaType}');
-} else if (foodChoice === '2') { // Pasta
+    alert(`Great choice! You selected ${pizzaType}`);
+
+} else if (foodChoice === '2') {
     pastaType = prompt(
         `Select your favourite Pasta type
       1 - Vegetable
@@ -76,14 +77,17 @@ if (foodChoice === "1") { // Pizza
     );
 
     if (pastaType === '1') {
-        alert('Great choice! You selected Vegetable Pasta');
+        pastaType = 'Vegetable';
     } else if (pastaType === '2') {
-        alert('Great choice! You selected Spaghetti Pasta');
+        pastaType = 'Spaghetti';
     } else if (pastaType === '3') {
-        alert('Great choice! You selected Chicken Pasta');
+        pastaType = 'Chicken'
     } else {
-        alert("Invalid selection, please start again and select a valid option. Bye 👋");
+        alert(alertMessage);
+        exit(1);
     }
+    alert(`Great choice! You selected ${pastaType}`);
+
 } else if (foodChoice === '3') { // Salad
     saladType = prompt(
         `Select your favourite Salad type
@@ -94,16 +98,18 @@ if (foodChoice === "1") { // Pizza
     );
 
     if (saladType === '1') {
-        alert('Great choice! You selected Chicken Salad');
+        saladType = 'Chicken';
     } else if (saladType === '2') {
-        alert('Great choice! You selected Caesar Salad');
+        saladType = 'Caesar';
     } else if (saladType === '3') {
-        alert('Great choice! You selected Grilled chicken Salad');
+        saladType = 'Grilled chicken';
     } else {
-        alert("Invalid selection, please start again and select a valid option. Bye 👋");
+        alert(alertMessage);
+        exit(1);
     }
+    alert(`Great choice! You selected ${saladType}`);
 } else {
-    alert("Invalid selection, please start again and select an option. Bye 👋");
+    alert(alertMessage);
     exit(1);
 }
 
@@ -122,9 +128,11 @@ if (userAge.toLowerCase() === 'adult') {
 } else if (userAge.toLowerCase() === 'child') {
     totalCost = 150;
 } else {
-    alert("Invalid selection, please start again and select an option. Bye 👋");
+    alert(alertMessage);
     exit(1);
 }
+
+console.log(selectedFood);
 
 alert(`Hello ${userName}! You have selected ${selectedFood} for serving type ${userAge}. The total 
          cost is ${totalCost} kr`);
