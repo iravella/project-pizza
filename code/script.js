@@ -149,6 +149,3 @@ if (orderConfirmation.toLowerCase() === 'yes') {
 } else {
     alert(`Order canceled. Have a great day, ${userName}!`);
 }
-
-
-
